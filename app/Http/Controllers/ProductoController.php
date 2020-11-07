@@ -7,14 +7,21 @@ use Illuminate\Http\Request;
 
 class ProductoController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware("auth");
+    }
+
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $productos = Producto::with("user")->paginate(10);
+        return view("productos.index",compact("productos"));
     }
 
     /**
