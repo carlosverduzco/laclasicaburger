@@ -31,7 +31,11 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        $producto=new Producto;
+        $title=__("Crear producto");
+        $textButton=__("Crear");
+        $route=route("productos.store");
+        return view("productos.create", compact("title","textButton","route","producto"));
     }
 
     /**
@@ -42,7 +46,15 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            "nombre" => "required|max:50|unique:productos",
+            "precio"=>"required",
+            "tipo_de_producto"=>"required",
+            "descripcion" => "required|string|min:10"
+        ]);
+        Producto::create($request->only("nombre", "precio", "tipo_de_producto","descripcion"));
+        return redirect(route("productos.index"))
+            ->with("success", __("¡Productos creado!"));
     }
 
     /**
@@ -51,10 +63,10 @@ class ProductoController extends Controller
      * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function show(Producto $producto)
+    /*public function show(Producto $producto)
     {
         //
-    }
+    }*/
 
     /**
      * Show the form for editing the specified resource.
@@ -64,7 +76,11 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        $update= true;
+        $title=__("Editar producto");
+        $textButton=__("Actualizar");
+        $route=route("productos.update", ["producto"=>$producto]);
+        return view("productos.create", compact("update","title","textButton","route","producto"));
     }
 
     /**
@@ -76,7 +92,15 @@ class ProductoController extends Controller
      */
     public function update(Request $request, Producto $producto)
     {
-        //
+        $this->validate($request, [
+            "nombre" => "required|max:50|unique:productos,nombre," . $producto->id,
+            "precio"=>"required",
+            "tipo_de_producto"=>"required",
+            "descripcion" => "required|string|min:10"
+        ]);
+        $producto->fill($request->only("nombre", "precio","tipo_de_producto","descripcion"))->save();
+        return back()->with("success", __("¡Producto actualizado!"));
+
     }
 
     /**
@@ -87,6 +111,8 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        //
+        $producto->delete();
+        return back()->with("success", __("¡Producto eliminado!"));
+
     }
 }
