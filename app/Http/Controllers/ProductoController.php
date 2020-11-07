@@ -63,10 +63,13 @@ class ProductoController extends Controller
      * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    /*public function show(Producto $producto)
+    public function show(Producto $producto)
     {
-        //
-    }*/
+        $title=__("Mostrar producto");
+        $textButton=__("Regresar");
+        $route=route("productos.index");
+        return view("productos.show", compact("title","textButton","route","producto"));
+    }
 
     /**
      * Show the form for editing the specified resource.

@@ -29,6 +29,7 @@
                 <td class="border px-4 py-2">{{ $producto->tipo_de_producto }}</td>
                 <td class="border px-4 py-2">{{ date_format($producto->created_at, "d/m/Y") }}</td>
                 <td class="border px-4 py-2">
+                    <a href="{{ route("productos.show", ["producto" => $producto]) }}" class="text-blue-400">{{ __("Mostrar") }}</a> |
                     <a href="{{ route("productos.edit", ["producto" => $producto]) }}" class="text-blue-400">{{ __("Editar") }}</a> |
                     <a
                         href="#"
