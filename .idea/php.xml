@@ -118,6 +118,10 @@
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
       <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/voku/stop-words" />
+      <path value="$PROJECT_DIR$/vendor/alexpechkarev/google-maps" />
+      <path value="$PROJECT_DIR$/vendor/alexpechkarev/geometry-library" />
+      <path value="$PROJECT_DIR$/vendor/jbroadway/urlify" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

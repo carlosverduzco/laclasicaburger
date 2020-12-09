@@ -2,16 +2,146 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-
+@layer base{
+    h1{
+        @apply text-2xl;
+    }
+    h2{
+        @apply text-xl;
+    }
+}
 .dark_mode{
     background-color: black;
 }
 .bg-primario{
     background-color: #FFB700;
 }
+.bg-primario-25{
+    background-color: #FFB70025;
+}
+.bg-primario-50{
+    background-color: #FFB70050;
+}
+.bg-primario-75{
+     background-color: #FFB70075;
+ }
+.bg-primario-gradient-yellow{
+    background-image: linear-gradient(135deg,#FFB700, yellow);
+}
 .bg-light-primario{
     background-color: #ffab3d;
 }
 *,::before,::after{
     border-color: #FFB700;
+}
+.map_location{
+    height: 500px;
+}
+.map_location-map{
+    height: 100%;
+    width: 50%;
+}
+.map_location-info{
+    align-self: center;
+    height: 80%;
+    width: 40%;
+}
+.terms-conditions h1,h2{
+    font-weight: bold;
+}
+.terms-conditions h1,span{
+    text-align: center;
+    display: block;
+}
+.hero_image_1{
+    /*background-image: url("https://scontent.fmzt3-1.fna.fbcdn.net/v/t1.0-9/129630419_917971115401961_4137577686651721639_o.jpg?_nc_cat=109&ccb=2&_nc_sid=e3f864&_nc_ohc=FJY-Nh-JEfUAX_hxuQU&_nc_ht=scontent.fmzt3-1.fna&oh=116b47814f138dfa82b0b2766e445a9e&oe=5FF58E42");
+    min-height: 581px;
+    background-size: 1528px 581px;
+    background-position: center center;*/
+}
+.hero_image_2{
+    display: none;
+}
+.max-w-50{
+    max-width: 30%;
+}
+.h-index-adds{
+    height: 535px;
+    min-width: 505px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .map_location{
+        height: 600px;
+    }
+    .map_location-map{
+        height: 65%;
+        width: 100%;
+    }
+    .map_location-info{
+        height: 30%;
+        width: 80%;
+    }
+    .h-index-adds{
+        height: 480px;
+        min-width: 460px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .hero_image_1{
+        display: none;
+    }
+    .hero_image_2{
+        display: block;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .h-index-adds{
+        height: 350px;
+        min-width: 320px;
+    }
+}
+
+
+
+/*
+Carrusel Tailwind CSS
+*/
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+.carousel-item {
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}#carousel-1_2:checked ~ .control-1_2,
+ #carousel-2_2:checked ~ .control-2_2,
+ #carousel-3_2:checked ~ .control-3_2 {
+     display: block;
+ }
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #FFB700;  /*Set to match the Tailwind colour you want the active one to be */
+}
+#carousel-1_2:checked ~ .control-1_2 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2_2:checked ~ .control-2_2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3_2:checked ~ .control-3_2 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #FFB700;  /*Set to match the Tailwind colour you want the active one to be */
 }
