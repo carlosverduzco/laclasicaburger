@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FacebookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,3 +82,6 @@ Route::get('/aviso_legal', function () {
 Route::get('/dashboard', function () {
     return redirect("./");
 });
+
+Route::get('auth/facebook', [FacebookController::class, 'redirectToFacebook']);
+Route::get('auth/facebook/callback', [FacebookController::class, 'handleFacebookCallback']);

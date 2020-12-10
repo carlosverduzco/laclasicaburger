@@ -5,27 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e65535e8-a22a-44ef-b528-13f0acd033b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/mymappi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/aviso_legal.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/menu.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/store.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/sucursales.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/laclasicaburger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laclasicaburger.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/fortify.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/fortify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/responsive-nav-link.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/responsive-nav-link.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/validation-errors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/validation-errors.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,6 +154,8 @@
       <path value="$PROJECT_DIR$/vendor/alexpechkarev/google-maps" />
       <path value="$PROJECT_DIR$/vendor/alexpechkarev/geometry-library" />
       <path value="$PROJECT_DIR$/vendor/jbroadway/urlify" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kLa4pBLwb5WVICyxQtEBdr0U1O" />
@@ -228,31 +222,13 @@
       <workItem from="1607272820115" duration="11903000" />
       <workItem from="1607394684324" duration="1348000" />
       <workItem from="1607396285367" duration="600000" />
-      <workItem from="1607444588733" duration="35869000" />
+      <workItem from="1607444588733" duration="36131000" />
+      <workItem from="1607491186789" duration="457000" />
+      <workItem from="1607546497606" duration="8791000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="2240" y="293" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1607490770519">
-      <screen x="1920" y="65" width="1280" height="984" />
-    </state>
-    <state x="2240" y="293" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.65.1280.984/0.0.1920.1040@1920.65.1280.984" timestamp="1607490770519" />
-    <state x="2202" y="221" key="SettingsEditor" timestamp="1607396030847">
-      <screen x="1920" y="65" width="1280" height="984" />
-    </state>
-    <state x="461" y="165" key="SettingsEditor/1920.65.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1605816761177" />
-    <state x="2202" y="221" key="SettingsEditor/1920.65.1280.984/0.0.1920.1040@1920.65.1280.984" timestamp="1607396030847" />
-    <state x="2216" y="259" key="run.anything.popup" timestamp="1607459580944">
-      <screen x="1920" y="65" width="1280" height="984" />
-    </state>
-    <state x="2216" y="259" key="run.anything.popup/1920.65.1280.984/0.0.1920.1040@1920.65.1280.984" timestamp="1607459580944" />
-    <state x="2335" y="278" width="672" height="642" key="search.everywhere.popup" timestamp="1607487331737">
-      <screen x="1920" y="65" width="1280" height="984" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.65.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1607451188097" />
-    <state x="2335" y="278" width="672" height="642" key="search.everywhere.popup/1920.65.1280.984/0.0.1920.1040@1920.65.1280.984" timestamp="1607487331737" />
   </component>
 </project>

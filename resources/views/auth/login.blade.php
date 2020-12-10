@@ -41,7 +41,20 @@
                 <x-jet-button class="ml-4">
                     {{ __('Ingresar') }}
                 </x-jet-button>
+
             </div>
         </form>
+        <div class="my-4 w-full flex">
+            <a class="ml-1 w-full flex btn btn-primary login-facebook" href="{{ url('auth/facebook') }}" id="btn-fblogin">
+                <div class="flex items-center ml-2">
+                    <i class="fa fa-facebook-square flex items-center" aria-hidden="true"></i>
+                </div>
+                <div class="block w-full text-center">
+                    <p>
+                        Continuar con Facebook
+                    </p>
+                </div>
+            </a>
+        </div>
     </x-jet-authentication-card>
 </x-guest-layout>

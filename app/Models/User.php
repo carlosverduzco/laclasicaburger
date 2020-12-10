@@ -10,7 +10,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens;
     use HasFactory;
@@ -27,6 +27,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'facebook_id'
     ];
 
     /**
@@ -58,4 +59,17 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function addNew($input)
+    {
+        $check = static::where('facebook_id',$input['facebook_id'])->first();
+
+
+        if(is_null($check)){
+            return static::create($input);
+        }
+
+
+        return $check;
+    }
 }
