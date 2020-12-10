@@ -12,17 +12,17 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ url('./menu') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Menu') }}
+                    <x-jet-nav-link href="{{ url('./menu') }}" :active="request()->routeIs('menu')">
+                        {{ __('Menú') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ url('./tienda') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ url('./tienda') }}" :active="request()->routeIs('store')">
                         {{ __('Tienda') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ url('./sucursales') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ url('./sucursales') }}" :active="request()->routeIs('sucursales')">
                         {{ __('Sucursales') }}
                     </x-jet-nav-link>
                 </div>
