@@ -94,7 +94,6 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        $this->authorize('update',Producto::class);
         $update= true;
         $title=__("Editar producto");
         $textButton=__("Actualizar");
@@ -113,7 +112,6 @@ class ProductoController extends Controller
      */
     public function update(Request $request, Producto $producto)
     {
-        $this->authorize('update',Producto::class);
         $this->validate($request, [
             "nombre" => "required|max:50|unique:productos,nombre," . $producto->id,
             "precio"=>"required",
@@ -134,7 +132,6 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        $this->authorize('delete',Producto::class);
         if(Gate::allows('admin')){
             $producto->delete();
             return back()->with("success", __("¡Producto eliminado!"));

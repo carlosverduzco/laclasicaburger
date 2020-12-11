@@ -45,10 +45,7 @@
                 </label>
                 <select name="categoria_id" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="categoria_id">
                 @foreach($categorias as $categoria)
-                    <option id="categoria_id" value="{{$categoria->id}}"
-                    @if(old("categoria_id")==$categoria->id)
-                        selected="selected"
-                    @endif>{{$categoria->nombre}}</option>
+                    <option id="categoria_id" value="{{$categoria->id}}" {{($categoria->id == $producto->categoria_id) ? 'selected' : ''}}>{{$categoria->nombre}}</option>
                 @endforeach
                 </select>
                 <p class="text-gray-600 text-xs italic">{{ __("Categoria") }}</p>
