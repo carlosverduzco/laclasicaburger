@@ -40,15 +40,19 @@
         </div>
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="tipo_de_producto">
-                    {{ __("Tipo de Producto") }}
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="categoria_id">
+                    {{ __("Categoria") }}
                 </label>
-                <select name="tipo_de_producto" value="{{ old("tipo_de_producto") ?? $producto->tipo_de_producto }}" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="tipo_de_producto">
-                    <option id="tipo_de_producto" value="hamburguesas">Hamburguesas</option>
-                    <option id="tipo_de_producto" value="bebidas" >Bebidas</option>
+                <select name="categoria_id" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="categoria_id">
+                @foreach($categorias as $categoria)
+                    <option id="categoria_id" value="{{$categoria->id}}"
+                    @if(old("categoria_id")==$categoria->id)
+                        selected="selected"
+                    @endif>{{$categoria->nombre}}</option>
+                @endforeach
                 </select>
-                <p class="text-gray-600 text-xs italic">{{ __("Tipo de producto") }}</p>
-                @error("tipo_de_producto")
+                <p class="text-gray-600 text-xs italic">{{ __("Categoria") }}</p>
+                @error("categoria_id")
                 <div class="border border-red-400 rounded-b bg-red-100 mt-1 px-4 py-3 text-red-700">
                     {{ $message }}
                 </div>

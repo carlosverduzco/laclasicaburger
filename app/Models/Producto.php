@@ -13,7 +13,7 @@ class Producto extends Model
         "nombre",
         "precio",
         "descripcion",
-        "tipo_de_producto"
+        "categoria_id"
     ];
 
     protected static function boot() {
@@ -27,5 +27,9 @@ class Producto extends Model
 
     public function user() {
         return $this->belongsTo(User::class);
+    }
+
+    public function categoria() {
+        return $this->belongsTo(Categoria::class);
     }
 }

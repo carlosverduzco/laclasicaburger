@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 use App\Models\Producto;
 use Illuminate\Support\Facades\Gate;
@@ -36,7 +37,8 @@ class ProductoController extends Controller
         $title=__("Crear producto");
         $textButton=__("Crear");
         $route=route("productos.store");
-        return view("productos.create", compact("title","textButton","route","producto"));
+        $categorias = Categoria::all();
+        return view("productos.create", compact("title","textButton","route","producto","categorias"));
     }
 
     /**
@@ -50,12 +52,12 @@ class ProductoController extends Controller
         $this->validate($request, [
             "nombre" => "required|max:50|unique:productos",
             "precio"=>"required",
-            "tipo_de_producto"=>"required",
+            "categoria_id"=>"required",
             "descripcion" => "required|string|min:10"
         ]);
-        Producto::create($request->only("nombre", "precio", "tipo_de_producto","descripcion"));
+        Producto::create($request->only("nombre", "precio", "categoria_id","descripcion"));
         return redirect(route("productos.index"))
-            ->with("success", __("¡Productos creado!"));
+            ->with("success", __("¡Producto creado!"));
     }
 
     /**
@@ -84,7 +86,8 @@ class ProductoController extends Controller
         $title=__("Editar producto");
         $textButton=__("Actualizar");
         $route=route("productos.update", ["producto"=>$producto]);
-        return view("productos.create", compact("update","title","textButton","route","producto"));
+        $categorias = Categoria::all();
+        return view("productos.create", compact("update","title","textButton","route","producto","categorias"));
     }
 
     /**
@@ -99,10 +102,10 @@ class ProductoController extends Controller
         $this->validate($request, [
             "nombre" => "required|max:50|unique:productos,nombre," . $producto->id,
             "precio"=>"required",
-            "tipo_de_producto"=>"required",
+            "categoria_id"=>"required",
             "descripcion" => "required|string|min:10"
         ]);
-        $producto->fill($request->only("nombre", "precio","tipo_de_producto","descripcion"))->save();
+        $producto->fill($request->only("nombre", "precio","categoria_id","descripcion"))->save();
         return back()->with("success", __("¡Producto actualizado!"));
 
     }

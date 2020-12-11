@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Producto;
+use App\Models\Categoria;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,6 +23,24 @@ class DatabaseSeeder extends Seeder
             "tipo" => "Administrador"
         ]);
 
-        //Producto::factory()->times(40)->create();
+        Categoria::factory()->times(1)->create([
+            "nombre" => "Hamburguesas"
+        ]);
+        Categoria::factory()->times(1)->create([
+            "nombre" => "Alitas y Boneless"
+        ]);
+        Categoria::factory()->times(1)->create([
+            "nombre" => "Ensaladas"
+        ]);
+        Categoria::factory()->times(1)->create([
+            "nombre" => "Papas"
+        ]);
+        Categoria::factory()->times(1)->create([
+            "nombre" => "Bebidas"
+        ]);
+        Categoria::factory()->times(1)->create([
+            "nombre" => "Extras"
+        ]);
+        Producto::factory()->times(1)->create();
     }
 }

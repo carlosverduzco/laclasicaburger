@@ -19,8 +19,9 @@ class CreateProductosTable extends Migration
             $table->string("nombre", 30)->unique();
             $table->float("precio");
             $table->text("descripcion");
-            $table->string("tipo_de_producto",20);
+            $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
             $table->timestamps();
+
 
             $table->foreign("id_usuario")->references("id")->on("users");
         });

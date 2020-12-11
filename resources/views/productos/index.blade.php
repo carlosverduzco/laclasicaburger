@@ -17,7 +17,7 @@
                         <th class="px-4 py-2">{{ __("Nombre") }}</th>
                         <th class="px-4 py-2">{{ __("Precio") }}</th>
                         <th class="px-4 py-2 md:h-auto h-32">{{ __("Descripcion") }}</th>
-                        <th class="px-4 py-2 md:h-auto h-16">{{ __("Tipo de Producto") }}</th>
+                        <th class="px-4 py-2 ">{{ __("Categoria") }}</th>
                         <th class="px-4 py-2">{{ __("Alta") }}</th>
                         <th class="px-4 py-2 md:h-auto h-20">{{ __("Acciones") }}</th>
                     </tr>
@@ -29,7 +29,7 @@
                             <td class="border px-4 py-2">{{ $producto->nombre }}</td>
                             <td class="border px-4 py-2">{{ $producto->precio }}</td>
                             <td class="border px-4 py-2 md:h-auto h-32 overflow-ellipsis overflow-hidden">{{ $producto->descripcion }}</td>
-                            <td class="border px-4 py-2 md:h-auto h-16">{{ $producto->tipo_de_producto }}</td>
+                            <td class="border px-4 py-2 ">{{ $producto->categoria->nombre }}</td>
                             <td class="border px-4 py-2">{{ date_format($producto->created_at, "d/m/Y") }}</td>
                             <td class="border px-4 py-2 md:h-auto h-20">
                                 <a href="{{ route("productos.show", ["producto" => $producto]) }}" class="text-blue-400">{{ __("Mostrar") }}</a> |

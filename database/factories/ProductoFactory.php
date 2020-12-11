@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Producto;
 use App\Models\User;
+use App\Models\Categoria;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ProductoFactory extends Factory
@@ -24,7 +25,7 @@ class ProductoFactory extends Factory
     {
         return [
             "nombre"=> $this->faker->unique()->sentence(1),
-            "tipo_de_producto"=> "hamburguesas",
+            "categoria_id"=> Categoria::all()->random()->id,
             "descripcion"=> $this->faker->paragraph(3),
             "id_usuario"=> User::all()->random()->id,
             "precio"=>10,
