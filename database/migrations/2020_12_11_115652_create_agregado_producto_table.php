@@ -16,7 +16,7 @@ class CreateAgregadoProductoTable extends Migration
         Schema::create('agregado_producto', function (Blueprint $table) {
             $table->id();
             $table->foreignId('producto_id')->constrained()->onDelete('cascade');
-            $table->foreignId('agregado_id');
+            $table->foreignId('agregado_id')->constrained();
         });
     }
 

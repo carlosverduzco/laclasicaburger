@@ -8,9 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Producto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_11_115652_create_agregado_producto_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_11_115652_create_agregado_producto_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/productos/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/productos/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/productos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/productos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/productos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/productos/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +220,7 @@
       <workItem from="1607546497606" duration="17140000" />
       <workItem from="1607617032125" duration="2301000" />
       <workItem from="1607633346692" duration="24846000" />
-      <workItem from="1607677473495" duration="10107000" />
+      <workItem from="1607677473495" duration="13921000" />
     </task>
     <servers />
   </component>

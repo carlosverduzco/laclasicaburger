@@ -30,7 +30,11 @@
                             <td class="border px-4 py-2">{{ $producto->precio }}</td>
                             <td class="border px-4 py-2 md:h-auto h-32 overflow-ellipsis overflow-hidden">{{ $producto->descripcion }}</td>
                             <td class="border px-4 py-2 ">{{ $producto->categoria->nombre }}</td>
-                            <td class="border px-4 py-2 ">Si</td>
+                            <td class="border px-4 py-2 ">
+                                @foreach($producto->agregados as $agregado)
+                                    <p>{{$agregado->nombre}}</p>
+                                @endforeach
+                            </td>
                             <td class="border px-4 py-2 md:h-auto h-20">
                                 <a href="{{ route("productos.show", ["producto" => $producto]) }}" class="text-blue-400">{{ __("Mostrar") }}</a> |
                                 <a href="{{ route("productos.edit", ["producto" => $producto]) }}" class="text-blue-400">{{ __("Editar") }}</a> |

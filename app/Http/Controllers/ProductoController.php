@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categoria;
 use Illuminate\Http\Request;
 use App\Models\Producto;
+use App\Models\Agregado;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -41,7 +42,8 @@ class ProductoController extends Controller
         $textButton=__("Crear");
         $route=route("productos.store");
         $categorias = Categoria::all();
-        return view("productos.create", compact("title","textButton","route","producto","categorias"));
+        $agregados = Agregado::all();
+        return view("productos.create", compact("title","textButton","route","producto","categorias","agregados"));
     }
 
     /**
@@ -58,7 +60,8 @@ class ProductoController extends Controller
             "categoria_id"=>"required",
             "descripcion" => "required|string|min:10"
         ]);
-        Producto::create($request->only("nombre", "precio", "categoria_id","descripcion"));
+        $producto = Producto::create($request->only("nombre", "precio", "categoria_id","descripcion"));
+        $producto->agregados()->attach($request->agregado_id);
         return redirect(route("productos.index"))
             ->with("success", __("¡Producto creado!"));
     }
@@ -90,7 +93,8 @@ class ProductoController extends Controller
         $textButton=__("Actualizar");
         $route=route("productos.update", ["producto"=>$producto]);
         $categorias = Categoria::all();
-        return view("productos.create", compact("update","title","textButton","route","producto","categorias"));
+        $agregados = Agregado::all();
+        return view("productos.create", compact("update","title","textButton","route","producto","categorias","agregados"));
     }
 
     /**
@@ -109,6 +113,7 @@ class ProductoController extends Controller
             "descripcion" => "required|string|min:10"
         ]);
         $producto->fill($request->only("nombre", "precio","categoria_id","descripcion"))->save();
+        $producto->agregados()->sync($request->agregado_id);
         return back()->with("success", __("¡Producto actualizado!"));
 
     }
