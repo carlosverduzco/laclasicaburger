@@ -28,5 +28,11 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('admin',function ($user){
             return $user->tipo == 'Administrador';
         });
+        Gate::define('NoUserFromFacebook',function ($user){
+            return $user->tipo != 'FacebookUser';
+        });
+        Gate::define('UserFromFacebook',function ($user){
+            return $user->tipo == 'FacebookUser';
+        });
     }
 }

@@ -42,14 +42,16 @@ class FacebookController extends Controller
 
                 Auth::login($finduser);
 
-                return redirect('/dashboard');
+                return redirect('/');
 
             }else{
                 $newUser = User::create([
                     'name' => $user->name,
                     'email' => $user->email,
                     'facebook_id'=> $user->id,
-                    'password' => encrypt('password')
+                    'password' => encrypt('password'),
+                    'tipo' => 'FacebookUser',
+                    'email_verified_at' => now()
                 ]);
 
                 Auth::login($newUser);

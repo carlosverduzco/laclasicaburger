@@ -63,5 +63,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'es-admin' => \App\Http\Middleware\EsAdmin::class,
+        'no-es-FacebookUser' => \App\Http\Middleware\NoEsUsuarioDeFacebook::class,
     ];
 }

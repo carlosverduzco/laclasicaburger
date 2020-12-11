@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Producto;
+use Illuminate\Support\Facades\Gate;
 
 
 class ProductoController extends Controller
@@ -114,8 +115,12 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        $producto->delete();
-        return back()->with("success", __("¡Producto eliminado!"));
-
+        if(Gate::allows('admin')){
+            $producto->delete();
+            return back()->with("success", __("¡Producto eliminado!"));
+        }
+        else{
+            return back()->with("fail", __("Acceso Negado"));;
+        }
     }
 }

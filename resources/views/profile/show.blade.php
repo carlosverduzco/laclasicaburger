@@ -1,10 +1,5 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Profile') }}
-        </h2>
-    </x-slot>
-
+    @can('NoUserFromFacebook')
     <div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updateProfileInformation()))
@@ -40,4 +35,12 @@
             </div>
         </div>
     </div>
+    @endcan
+    @can('UserFromFacebook')
+         <div class="h-full w-full mt-44 text-center">
+             <h1>
+                 Error Acceso Denegado
+             </h1>
+         </div>
+        @endcan
 </x-app-layout>

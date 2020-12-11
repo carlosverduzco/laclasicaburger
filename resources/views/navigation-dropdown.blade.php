@@ -26,11 +26,13 @@
                         {{ __('Sucursales') }}
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ url('./productos') }}" :active="request()->routeIs('sucursales')">
-                        {{ __('CRUD Productos') }}
-                    </x-jet-nav-link>
-                </div>
+                @can('admin')
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ url('./productos') }}" :active="request()->routeIs('sucursales')">
+                            {{ __('CRUD Productos') }}
+                        </x-jet-nav-link>
+                    </div>
+                @endcan
             </div>
         @auth
             <!-- Settings Dropdown -->
@@ -68,10 +70,11 @@
                             {{ __(Auth::user()->name) }}
                         </div>
                         <div class="border-t border-primary"></div>
-                        <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                            {{ __('Perfil') }}
-                        </x-jet-dropdown-link>
-
+                        @can('NoUserFromFacebook')
+                            <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                {{ __('Perfil') }}
+                            </x-jet-dropdown-link>
+                        @endcan
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -133,11 +136,13 @@
                 {{ __('Sucursales') }}
             </x-jet-responsive-nav-link>
         </div>
-        <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ url('./productos') }}" :active="request()->routeIs('dashboard')">
-                {{ __('CRUD Productos') }}
-            </x-jet-responsive-nav-link>
-        </div>
+        @can('admin')
+            <div class="pt-2 pb-3 space-y-1">
+                <x-jet-responsive-nav-link href="{{ url('./productos') }}" :active="request()->routeIs('dashboard')">
+                    {{ __('CRUD Productos') }}
+                </x-jet-responsive-nav-link>
+            </div>
+        @endcan
     @auth
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-primary">
