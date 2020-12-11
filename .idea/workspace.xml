@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e65535e8-a22a-44ef-b528-13f0acd033b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_09_052946_create_categorias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_09_052946_create_categorias_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_10_204823_create_productos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_10_204823_create_productos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Producto.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +215,7 @@
       <workItem from="1607546497606" duration="17140000" />
       <workItem from="1607617032125" duration="2301000" />
       <workItem from="1607633346692" duration="24846000" />
-      <workItem from="1607677473495" duration="1717000" />
+      <workItem from="1607677473495" duration="3002000" />
     </task>
     <servers />
   </component>
