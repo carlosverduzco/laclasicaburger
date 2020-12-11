@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Producto;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,5 +21,7 @@ class DatabaseSeeder extends Seeder
             "password" => bcrypt("laclasicaburgersafepassword"),
             "tipo" => "Administrador"
         ]);
+
+        //Producto::factory()->times(40)->create();
     }
 }

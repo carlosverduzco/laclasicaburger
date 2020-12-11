@@ -150,3 +150,30 @@ Carrusel Tailwind CSS
 #carousel-3_2:checked ~ .control-3_2 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
     color: #FFB700;  /*Set to match the Tailwind colour you want the active one to be */
 }
+
+/*
+    Table responsive
+
+ */
+html,
+body {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    table {
+        display: inline-table !important;
+    }
+
+    thead tr:not(:first-child) {
+        display: none;
+    }
+}
+
+td:not(:last-child) {
+    border-bottom: 0;
+}
+
+th:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}

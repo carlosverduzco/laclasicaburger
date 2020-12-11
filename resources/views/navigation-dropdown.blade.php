@@ -26,6 +26,11 @@
                         {{ __('Sucursales') }}
                     </x-jet-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ url('./productos') }}" :active="request()->routeIs('sucursales')">
+                        {{ __('CRUD Productos') }}
+                    </x-jet-nav-link>
+                </div>
             </div>
         @auth
             <!-- Settings Dropdown -->
@@ -126,6 +131,11 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ url('./sucursales') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Sucursales') }}
+            </x-jet-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ url('./productos') }}" :active="request()->routeIs('dashboard')">
+                {{ __('CRUD Productos') }}
             </x-jet-responsive-nav-link>
         </div>
     @auth

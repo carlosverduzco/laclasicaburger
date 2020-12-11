@@ -39,7 +39,7 @@
                     <div class="text-primary underline flex items-center">
                         <ul class="flex justify-between">
                             <li>
-                                <a href="./aviso_legal">Aviso Legal</a>
+                                <a href="{{ url('./aviso_legal') }}">Aviso Legal</a>
                             </li>
                         </ul>
                     </div>

@@ -16,7 +16,7 @@ class EsAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(\Auth::user()->tipo != 'Admin'){
+        if(\Auth::user()->tipo != 'Administrador'){
             return back();
         }
         return $next($request);
