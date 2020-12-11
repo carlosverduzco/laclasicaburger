@@ -1,3 +1,29 @@
+## Nombre del proyecto
+laclasicaburger
+## Descripción del objetivo del proyecto
+El objetivo principal del proyecto es el de desarrollar una página web para el restaurante de hamburguesas la clásica burger, en la que los clientes habituales puedan acceder de forma rápida al menú y a su vez atraer nuevos clientes con un diseño muy característico del restaurante.  
+
+El objetivo secundario es el que la página web se convierta en una aplicación web que también sirva para que los clientes hagan sus pedidos a domicilio desde ella, obtengan promociones exclusivas y se sientan más identificados con el restaurante.
+
+## Integrante
+Carlos  Verduzco
+## Instrucciones de instalación 
+1 - git clone https://github.com/Catoras/laclasicaburger.git
+2 - php artisan migrate
+3 - php artisan db:seed
+
+- Crea un usuario de tipo administrador con las credenciales:
+  - Correo: carlos@test.com
+
+  - Contraseña: laclasicaburgersafepassword
+
+- Crea 6 categorias para utilizar en el CRUD de productos
+
+- Crea un producto hecho con faker.
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">

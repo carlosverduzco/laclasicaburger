@@ -21,6 +21,7 @@ class CreateProductosTable extends Migration
             $table->text("descripcion");
             $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
 
 
             $table->foreign("id_usuario")->references("id")->on("users");

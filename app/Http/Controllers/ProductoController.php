@@ -6,10 +6,13 @@ use App\Models\Categoria;
 use Illuminate\Http\Request;
 use App\Models\Producto;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 class ProductoController extends Controller
 {
+    use SoftDeletes;
+
     public function __construct()
     {
         $this->middleware("es-admin");
