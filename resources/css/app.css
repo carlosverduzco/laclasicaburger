@@ -75,6 +75,9 @@
     padding: 5px;
     border-radius:7px;
 }
+.min-h-menu-items{
+    min-height: 200px;
+}
 @media only screen and (max-width: 1100px) {
     .map_location{
         height: 600px;

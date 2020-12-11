@@ -28,7 +28,7 @@ class ProductoFactory extends Factory
             "categoria_id"=> Categoria::all()->random()->id,
             "descripcion"=> $this->faker->paragraph(3),
             "id_usuario"=> User::all()->random()->id,
-            "precio"=>10,
+            "precio"=>90,
             "created_at"=>now()
         ];
     }

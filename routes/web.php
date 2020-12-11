@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Producto;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\ProductoController;
@@ -52,7 +53,8 @@ Route::get('/', function () {
     return view('index')->with(compact('filesarray'))->with(compact('imgsarray2carousel'));
 });
 Route::get('/menu', function () {
-    return view('menu');
+    $productos = Producto::all();
+    return view("menu",compact("productos"));
 });
 Route::get('/sucursales', function () {
     $response = \GoogleMaps::load('placeadd')
