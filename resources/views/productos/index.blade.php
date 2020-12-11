@@ -5,9 +5,11 @@
                 <div class="flex justify-center flex-wrap bg-gray-200 p-4 mt-5">
                     <div class="text-center">
                         <h1 class="mb-5">{{ __("Listado de productos") }}</h1>
+                        @can('create',App\Models\Producto::class)
                         <a href="{{ route("productos.create") }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                             {{ __("Crear producto") }}
                         </a>
+                        @endcan
                     </div>
                 </div>
                 <table class="w-full flex flex-row flex-no-wrap md:bg-white rounded-lg overflow-hidden md:shadow-lg my-5 text-center mt-3" style="width: 100%">
