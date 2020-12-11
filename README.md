@@ -8,17 +8,16 @@ El objetivo secundario es el que la página web se convierta en una aplicación 
 ## Integrante
 Carlos  Verduzco
 ## Instrucciones de instalación 
-1 - git clone https://github.com/Catoras/laclasicaburger.git
-2 - php artisan migrate
-3 - php artisan db:seed
+1. git clone https://github.com/Catoras/laclasicaburger.git
+2. php artisan migrate
+3. php artisan db:seed
+	- Crea un usuario de tipo administrador con las credenciales:
+	  - Correo: carlos@test.com
 
-- Crea un usuario de tipo administrador con las credenciales:
-  - Correo: carlos@test.com
-
-  - Contraseña: laclasicaburgersafepassword
-- Crea 6 categorias para utilizar en el CRUD de productos.
-- Crea 20 productos hecho con faker.
-- Crea 4 agregados  para utilizar en el CRUD de productos.
+	  - Contraseña: laclasicaburgersafepassword
+	- Crea 6 categorias para utilizar en el CRUD de productos.
+	- Crea 20 productos hecho con faker.
+	- Crea 4 agregados  para utilizar en el CRUD de productos.
 
 
 
