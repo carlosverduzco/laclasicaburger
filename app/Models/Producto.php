@@ -39,4 +39,7 @@ class Producto extends Model
         $value = strtolower($value);
         $this->attributes['nombre'] = ucwords($value);
     }
+    public function categorias(){
+        return $this->belongsToMany(Agregado::class);
+    }
 }

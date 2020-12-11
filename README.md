@@ -16,10 +16,9 @@ Carlos  Verduzco
   - Correo: carlos@test.com
 
   - Contraseña: laclasicaburgersafepassword
-
-- Crea 6 categorias para utilizar en el CRUD de productos
-
-- Crea un producto hecho con faker.
+- Crea 6 categorias para utilizar en el CRUD de productos.
+- Crea 20 productos hecho con faker.
+- Crea 4 agregados  para utilizar en el CRUD de productos.
 
 
 

@@ -25,7 +25,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $productos = Producto::with("user")->paginate(10);
+        $productos = Producto::with("user")->simplePaginate(10);
         return view("productos.index",compact("productos"));
     }
 

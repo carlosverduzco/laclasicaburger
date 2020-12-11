@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Producto;
 use App\Models\Categoria;
+use App\Models\Agregado;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -41,6 +42,20 @@ class DatabaseSeeder extends Seeder
         Categoria::factory()->times(1)->create([
             "nombre" => "Extras"
         ]);
-        Producto::factory()->times(1)->create();
+
+        Producto::factory()->times(20)->create();
+
+        Agregado::factory()->times(1)->create([
+            "nombre" => "Low-Carb"
+        ]);
+        Agregado::factory()->times(1)->create([
+            "nombre" => "Vegetariano"
+        ]);
+        Agregado::factory()->times(1)->create([
+            "nombre" => "Deluxe"
+        ]);
+        Agregado::factory()->times(1)->create([
+            "nombre" => "Sin Gluten"
+        ]);
     }
 }

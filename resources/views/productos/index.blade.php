@@ -18,7 +18,7 @@
                         <th class="px-4 py-2">{{ __("Precio") }}</th>
                         <th class="px-4 py-2 md:h-auto h-32">{{ __("Descripcion") }}</th>
                         <th class="px-4 py-2 ">{{ __("Categoria") }}</th>
-                        <th class="px-4 py-2">{{ __("Alta") }}</th>
+                        <th class="px-4 py-2 ">{{ __("Agregados") }}</th>
                         <th class="px-4 py-2 md:h-auto h-20">{{ __("Acciones") }}</th>
                     </tr>
                     @endforeach
@@ -30,7 +30,7 @@
                             <td class="border px-4 py-2">{{ $producto->precio }}</td>
                             <td class="border px-4 py-2 md:h-auto h-32 overflow-ellipsis overflow-hidden">{{ $producto->descripcion }}</td>
                             <td class="border px-4 py-2 ">{{ $producto->categoria->nombre }}</td>
-                            <td class="border px-4 py-2">{{ date_format($producto->created_at, "d/m/Y") }}</td>
+                            <td class="border px-4 py-2 ">Si</td>
                             <td class="border px-4 py-2 md:h-auto h-20">
                                 <a href="{{ route("productos.show", ["producto" => $producto]) }}" class="text-blue-400">{{ __("Mostrar") }}</a> |
                                 <a href="{{ route("productos.edit", ["producto" => $producto]) }}" class="text-blue-400">{{ __("Editar") }}</a> |
@@ -61,7 +61,7 @@
                 </table>
 
                 @if($productos->count())
-                    <div class="mt-3">
+                    <div class="mt-3 h-12">
                         {{ $productos->links() }}
                     </div>
                 @endif
