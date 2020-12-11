@@ -10,10 +10,10 @@
                         </a>
                     </div>
                 </div>
-                <table class="w-full flex flex-row flex-no-wrap md:bg-white rounded-lg overflow-hidden md:shadow-lg my-5 | border-separate border-2 text-center border-gray-500 mt-3" style="width: 100%">
+                <table class="w-full flex flex-row flex-no-wrap md:bg-white rounded-lg overflow-hidden md:shadow-lg my-5 text-center mt-3" style="width: 100%">
                     <thead>
                     @foreach($productos as $producto)
-                    <tr class="bg-primario flex flex-col flex-no wrap md:table-row rounded-l-lg md:rounded-none mb-2 md:mb-0 | ">
+                    <tr class="bg-primario flex flex-col flex-no wrap md:table-row rounded-l-lg md:rounded-none mb-2 md:mb-0 ">
                         <th class="px-4 py-2">{{ __("Nombre") }}</th>
                         <th class="px-4 py-2">{{ __("Precio") }}</th>
                         <th class="px-4 py-2 md:h-auto h-32">{{ __("Descripcion") }}</th>
